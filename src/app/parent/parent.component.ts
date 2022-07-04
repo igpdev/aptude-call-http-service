@@ -7,9 +7,6 @@ import { User } from '../user';
   templateUrl: './parent.component.html',
 })
 export class ParentComponent implements OnInit {
-  @Input() message: string = 'Hi I am here';
-  @Output() informParent = new EventEmitter();
-
   users: User[];
   serviceCalled: Boolean = false;
 
@@ -21,9 +18,5 @@ export class ParentComponent implements OnInit {
       this.users = data;
       this.serviceCalled = true;
     });
-  }
-
-  takeAction() {
-    this.informParent.emit('The child says ' + this.message);
   }
 }
