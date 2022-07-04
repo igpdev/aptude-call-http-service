@@ -13,6 +13,7 @@ export class ParentComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    // Call the getUsers service to assign the data into the users varaible.
+    // 1. Call the getUsers service to assign the data into the users varaible
+    // 2. In the same service call assignment, set the serviceCalled property to true.
   }
 }
