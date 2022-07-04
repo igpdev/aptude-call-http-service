@@ -1,14 +1,4 @@
-<h1>Call Http service</h1>
-
-<p *ngIf="serviceCalled">Service called successfully: we got {{ users.length }} users.</p>
-
-<p>User list</p>
-<!-- Use angular directive inside the ul element to iterate over the users array
-     and display the following 3 properties inside each br tags:
-     - first_name
-     - last_name
-     - email
--->
-<ol>
-  <li></li>
-</ol>
+<p *ngIf="serviceCalled; else elseBlock">
+  Service called successfully: we got {{ users.length }} users.
+</p>
+<ng-template #elseBlock> Service has not been called yet. </ng-template>
