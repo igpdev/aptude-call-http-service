@@ -14,9 +14,5 @@ export class ParentComponent implements OnInit {
 
   ngOnInit() {
     // Call the getUsers service to assign the data into the users varaible.
-    this.userService.getUsers().subscribe((data) => {
-      this.users = data;
-      this.serviceCalled = true;
-    });
   }
 }
